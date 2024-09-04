@@ -23,7 +23,4 @@ const TooltipContent = React.forwardRef(({ className, sideOffset = 4, ...props }
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
-// Example: @/components/ui/tooltip.js
-
-export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip';
-
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }

@@ -1,26 +1,35 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 import Nav from "./Nav";
-import services from "@/app/services/page";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
-      <div className="container mx-auto flex justify-between item-center">
-        {/* logo */}
-        <Link href="/" className="text-4xl font-semibold">
-          Mukesh<span className="text-accent"> Rai</span>
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed w-full top-0 left-0 right-0 z-50 bg-[#00002c] backdrop-blur-sm"
+    >
+      <div className="container mx-auto py-4 px-4 flex justify-between items-center">
+        <Link href="/">
+          <motion.h1 
+            className="text-3xl font-bold"
+            whileHover={{ scale: 1.05 }}
+          >
+            Mukesh<span className="text-[#ffbf00]">.</span>
+          </motion.h1>
         </Link>
-        {/* desktop nav */}
-        <div className="hidden xl:flex item-center gap-8">
+        <div className="hidden md:block">
           <Nav />
         </div>
-        <div className="xl:hidden">
+        <div className="md:hidden">
           <MobileNav />
-          </div>
+        </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

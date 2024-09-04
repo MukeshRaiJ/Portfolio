@@ -7,7 +7,6 @@ module.exports = {
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -24,10 +23,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#244855",
+        primary: "transparent",
         accent: {
-          DEFAULT: "#e64833",
-          hover: "#e64833",
+          DEFAULT: "#ffbf00",
+          hover: "#ffd966",
         },
       },
       keyframes: {
